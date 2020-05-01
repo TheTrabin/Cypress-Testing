@@ -191,6 +191,7 @@ export default function Form() {
           onChange={inputChange}
           value={formState.username}
           placeholder ="What do we call you?"
+          data-cy="username"
         />
         {errors.username.length > 0 ? <p className="error">{errors.username}</p> : null}
       </label>
@@ -204,6 +205,7 @@ export default function Form() {
           multiple
           placeholder ="someone@something.com"
           value={formState.email}
+          data-cy="email"
         />
         {errors.email.length > 0 ? (
           <p className="error">{errors.email}</p>
@@ -220,6 +222,7 @@ export default function Form() {
           autoComplete="new-password"
           value={formState.password}
           placeholder ="Make it a good one, atleast 8."
+          data-cy="password"
           />
         {errors.password.length > 0 ? (
           <p className="error">{errors.password}</p>
@@ -233,6 +236,7 @@ export default function Form() {
           onChange={inputChange}
           value={formState.bio}
           placeholder ="At least a couple sentences."
+          data-cy="bio"
         />
         {errors.bio.length > 0 ? (
           <p className="error">{errors.bio}</p>
